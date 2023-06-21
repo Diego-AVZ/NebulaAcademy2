@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEBULA ACADEMY</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body id="body" style="overflow: hidden; cursor: crosshair; ">
+            <img id="logo" src="logoNeb.png" style="z-index:9998; position: fixed; width: 10vw; margin-top: 42vw; margin-left:42.5vw; display: block;">
+            <img id="logo2"  style="position: fixed; width: 7vw; margin-top: -1.8vw; margin-left:20vw; display: none; opacity: 80%; z-index: 9999;">
+     <img  src="imgweb.png" style="position: absolute; width: 75vw; margin-top: -5%; margin-left:48%; transform: rotate(85deg); opacity: 20%;">
+     <img  src="webimg2.png" style="position: absolute; width: 90vw; margin-top: -10%; margin-left:20%; transform: rotate(25deg); opacity: 42%; filter: brightness(40%);">
+     <img  src="webimg2.png" style="position: absolute; width: 90vw; margin-top: -15%; margin-left:-30%; transform: rotate(25deg); opacity: 42%; filter: brightness(40%);">
+<div style="position: fixed; width: 98%; height: 98%; margin-top: -1vw;">
+    <p id="t1" style="position:absolute; font-size: 3.7vw; color:rgb(91, 91, 91); margin-top: 4vw; margin-left: 4vw; display: block;">Welcome to the</p>
+    <p id="t2" style="position:absolute; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; font-size: 6vw; color:rgb(0, 0, 0); margin-top: 8vw; margin-left: 4vw; font-weight: 600; display: block;">Nebula Academy</p>
+    <!--<p style="position:absolute; font-size: 2vw; color:rgb(91, 90, 90); margin-top: 12vw; margin-left: 2vw; font-weight: 600;">Please Select your Level:</p> -->
+    <div id="LevelIndex">
+        <button id="easy"><p style=" font-size: 1.8vw; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top: 1.3vw ; margin-left:0;">Easy</p></button>
+        <button id="Medium"><p style=" font-size: 1.8vw; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top: 1.3vw ; margin-left:-0.1vw;">Intermediate</p></button>
+        <button id="NebulaXyield"><p style=" font-size: 1.8vw; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  margin-top: 1.3vw ; margin-left:0;">xYield</p></button>
+    </div>
+
+    <div id="EasyDiv">
+        <div style="position:absolute; font-size: 1.8vw; font-family: sans-serif;  margin-top: 0vw ; margin-left:3vw; width: 30%; height: 90%; border-style: none; border-color: black;">
+            <b> Good Choice If:</b> <br> <p style="font-size: 1.5vw;">You are NEW to Crypto & DeFi <br><br> NO Wallet Installed <br><br>Eager to Learn Passive Income Generation</p>
+
+        </div>
+        <div style="position:absolute; font-size: 1.8vw; font-family: sans-serif;  margin-top: 0vw ; margin-left:40vw; width: 25%; height: 90%; border-style: none; border-color: black;">
+            <b> Requirements:</b> <br> <p style="font-size: 1.5vw;">Pen and Paper <br><br> 20 Minutes of Your Time <br><br></p>
+            
+        </div>
+        <div style="position:absolute; font-size: 1.8vw; font-family: sans-serif;  margin-top: 0vw ; margin-left:70vw; width: 30%; height: 90%; border-style: none; border-color: black;">
+            <b> content:</b> <br> <p style="font-size: 1.5vw;">Wallet Installation <br><br> Basic Level of DeFi <br><br>Basic Security in DeFi<br><br>Intro to the Next Course</p>
+        </div>
+
+        <button class="learnBut" id="EasyCourse">Let's Learn</button>
+
+        
+    </div>
+    <div id="InterDiv">
+        INTERMEDIATE
+
+
+    </div>
+    <div id="HowToDiv">
+        HOW TO USE!
+
+
+    </div>
+
+    <div id="instruc">
+        <b> Select a Level & Open the Course </b>
+        <p style="font-size: 1vw;">Complete the tasks along the way. <br>
+            For each task completed, you will earn points. Once you have completed the course, you will have the opportunity to Mint an NFT certificate. <br>
+        By acquiring all the NFTs, you will gain rewards and benefits within the Nebula Protocol ecosystem.</p>
+    </div>
+</div>
+
+      
+
+    <div id="course1">
+
+        
+
+        <!--<button id="Back"><<</button>
+        <button id="Next">>></button> -->
+        <div style="width: 90%; height: 97%;">
+            <img src="mtmsk.png" style="position: absolute; margin-top: 62.8vw; margin-left: 36.4vw; width: 4vw;">
+            <div id="account" ></div>
+        <button class="courseButtons" id="MTMSK" onclick="Connect()" >Connect Wallet</button>
+        <button  class="courseButtons" id="addPolygon" style="z-index: 9999; position: absolute;font-size:1.2vw;  margin-top: 184.5vw; margin-left: 3vw; width: 10vw;color:rgb(255, 255, 255); background-color: rgb(106, 40, 169); border-radius: 1vw; border-style: none; height: 2.5vw; cursor: pointer;">Add Polygon</button>
+         <button  class="courseButtons" id="addArbitrum" style="z-index: 9999; position: absolute;font-size:1.2vw;  margin-top: 184.5vw; margin-left: 14vw; width: 10vw;color:rgb(255, 255, 255); background-color: rgba(17, 35, 190, 0.96); border-radius: 1vw; border-style: none; height: 2.5vw; cursor: pointer;">Add Arbitrum</button>
+         <button  class="courseButtons" id="addBSC" style="z-index: 9999; position: absolute;font-size:1.2vw;  margin-top: 184.5vw; margin-left: 25vw; width: 10vw; color:rgb(255, 255, 255); background-color: rgb(241, 190, 36); border-radius: 1vw; border-style: none; height: 2.5vw; cursor: pointer;">Add BSC</button>
+            <span id="wid" style="display: block; height: 1vw;"></span>
+            <p id="whatIsDeFi" style="font-size: 3vw; font-family: sans-serif; font-weight: 600; color:black;">What is DeFi?</p><span style="display: block; height: 1vw;"></span><span style="display: block; height: 1vw;"></span>
+        <p style="text-align: justify; position:absolute; font-size: 1.5vw; font-family: sans-serif;  margin-top: 0vw ; width: 90%; line-height: 1.7;">
+            
+            DeFi stands for Decentralized Finance. Decentralized finance is one of the many applications of blockchain technology. It enables access to traditional financial services in a much faster, simpler, more efficient, and user-friendly manner.
+
+            <span style="display: block; height: 1vw;"></span><span style="display: block; height: 1vw;"></span>As investors, it allows us to generate passive income, borrow or lend money, and make investments, all without centralized intermediaries and within minutes.
+
+            Everyone has access to significant opportunities without any bureaucratic procedures and without seeking permission from anyone, thanks to decentralization.
+
+           <span style="display: block; height: 1vw;"></span><span style="display: block; height: 1vw;"></span> <b>Welcome to the financial revolution!</b>  <span style="display: block; height: 1vw;"></span>
+        </p>
+        <hr style="margin-top: 34vw ; margin-left: 3vw; height: 0.1vw; ">
+        
+      
+
+        <p id="MetamaskInstall" style="font-size: 3vw;  margin-top: 5vw ; font-family: sans-serif; font-weight: 600; color:black;">How to use DeFi?</p><span style="display: block; height: 1vw;"></span>
+        <p style="text-align:center; text-align: justify; position:relative; font-size: 1.5vw; font-family: sans-serif;  margin-top: -2vw ;  margin-left: 1vw ; width: 103%; line-height: 1.7;">
+            
+           <span style="display: block; height: 1vw;"></span><span style="display: block; height: 1vw;"></span>To access decentralized finance, it is necessary to install a decentralized wallet.
+           <span style="display: block; height: 1vw;"></span><span style="display: block; height: 1vw;"></span> 
+           <b>One of the most well-known wallets is Metamask. </b> <span style="display: block; height: 1vw;"></span> <span style="display: block; height: 1vw;"></span>
+           When installing it, you will need to create an 'account on the blockchain.' (Don't worry, it's simple and will take less than 5 minutes). 
+          <span style="display: block; height: 1vw;"></span> <span style="display: block; height: 1vw;"></span> To create an account on the blockchain, you will need to write down 12 words on a piece of paper. These 12 words are the Seed Phrase or private key that <b>will allow you to control your cryptocurrencies.</b> You should <b>not share</b> this seed phrase with anyone as it could lead to the theft of your funds. Write down the words on paper and <b>keep it safe, don't lose it</b>. 
+          <span style="display: block; height: 1vw;"></span><span style="display: block; height: 1vw;"></span>In addition to these 12 words, you will need to create a password that will grant access to your Metamask account on the device where it is installed. This password will not work if you try to access the account from another device. If you lose or forget the password, don't worry because you can still access it using the seed phrase or private key.
+           
+           <span  style="display: block; height: 1vw;"></span><span style="display: block; height: 1vw;"></span><b>Let's Install Metamask:</b><span style="display: block; height: 1vw;"></span><span style="display: block; height: 1vw;"></span>
+           Please click on this link (<a href="https://metamask.io/" target="_blank">https://metamask.io/</a>) , it will open the official Metamask website where you can install the wallet. Follow the steps provided and then return to this window to continue with the course.
+            <span style="display: block; height: 1vw;"></span><span style="display: block; height: 1vw;"></span>
+            If you have already installed Metamask, congratulations! You now have your account on the blockchain.
+            <span style="display: block; height: 1vw;"></span><span  id="WalletConnect" style="display: block; height: 1vw;"></span> With that wallet, you can connect to dApps (decentralized applications) to access their services.
+            <span style="display: block; height: 1vw;"></span><span style="display: block; height: 1vw;"></span><b>How do you connect Metamask to a dApp?</b> <span style="display: block; height: 1vw;"></span>Very simple, just click on this button:
+
+            <span style="display: block; height: 1vw;"></span><span style="display: block; height: 1vw;"></span><span style="display: block; height: 3vw;"></span> Now you are connected to this dApp. Up there, you can see your public key or public address on the blockchain. <span style="display: block; height: 1vw;"></span>
+            <span style="display: block; height: 1vw;"></span> With this public address, you will be able to receive funds and see the amount you have. The public address will also appear at the top of your Metamask extension.  <span style="display: block; height: 2vw;"></span>
+            You can create multiple blockchain accounts using a single private key. To do this, open the Metamask extension and click on the circle icon in the upper right corner, which represents your accounts. From there, simply click on 'create account' and assign a unique name to your newly created account.
+            <span style="display: block; height: 3vw;"></span>
+
+            <hr id="addNet" style="margin-top: 3vw ; margin-left: 3vw; height: 0.1vw; ">
+        
+        <p id="NewNetworks" style="font-size: 3vw;  margin-top: 5vw ; font-family: sans-serif; font-weight: 600; color:black;">Choose Network</p><span style="display: block; height: 1vw;"></span>
+        <p style="text-align:center; text-align: justify; position:relative; font-size: 1.5vw; font-family: sans-serif;  margin-top: -2vw ;  margin-left: 1vw ; width: 103%; line-height: 1.7;">
+            <span style="display: block; height: 1vw;"></span>With Metamask, you can use dApps on all EVM (Ethereum Virtual Machine) Blockchains. To add the most important ones, you can click on the following buttons:<span style="display: block; height: 1vw;"></span>
+
+               <span style="display: block; height: 4vw;"></span> Add them one by one to earn 300 points!<span style="display: block; height: 1vw;"></span><span style="display: block; height: 1vw;"></span>
+
+                You can add more networks at this link: <a href="https://chainlist.org/" target="_blank">https://chainlist.org/</a><span style="display: block; height: 1vw;"></span><span style="display: block; height: 2vw;"></span>
+                At the top of the Metamask extension, you can view and switch between all the added networks.
+        </p>
+
+        </p>
+
+         <hr id="Fund" style="margin-top: 4vw ; margin-left: 3vw; height: 0.1vw; ">
+
+          <button  onclick=switchToPolygonNetwork() class="courseButtons" id="SwitchPolygon" style="z-index: 9999; position: absolute;font-size:1.2vw; margin-top: 34.4vw; margin-left: 27vw; width: 12vw; color:rgb(255, 255, 255); background-color: rgb(88, 35, 136); border-radius: 1vw; border-style: none; height: 2.5vw; cursor: pointer;">Switch to Polygon</button>
+          <a href="#NextStep1"><button id="skip1">Skip</button></a>
+        <p id="FundWallet" style="font-size: 3vw;  margin-top: 4vw ; font-family: sans-serif; font-weight: 600; color:black;">Fund your Wallet</p><span style="display: block; height: 1vw;"></span>
+        <p style="text-align:center; text-align: justify; position:relative; font-size: 1.5vw; font-family: sans-serif;  margin-top: -2vw ;  margin-left: 1vw ; width: 103%; line-height: 1.7;">
+            <span style="display: block; height: 1vw;"></span> To use DeFi and blockchain services in general, you will need funds in your account. In order to sign smart contracts and execute transactions, a small fee is required to record the data on the blockchain.
+            <span style="display: block; height: 2vw;"></span>Remember that upon completing this course, you will have the opportunity to obtain an NFT certificate that will grant you benefits within Nebula Protocol. To obtain it, you will need to sign a smart contract and cover a small gas fee (approximately $0.1-$0.2).
+            <span style="display: block; height: 2vw;"></span>So if you want the NFT and use DeFi, you need to fund your wallet. Don't worry, we will guide you through the process. The NFT will be on the Polygon blockchain. So select the Polygon network in your MetaMask or click on this button:
+            <span style="display: block; height: 2vw;"></span>You may already have an account on a cryptocurrency exchange such as Binance, Kucoin, Bybit, etc. <b>If you are already using an exchange and have cryptocurrencies, click here to skip to the next step:</b>
+            <span style="display: block; height: 2vw;"></span>But if you don't have one, you will need to create an account on an exchange and purchase cryptocurrencies to send them to your wallet. If you don't have an account on any exchange, you can choose any of these options and sign up through the following links:
+            
+            <span style="display: block; height: 1vw;"></span>
+            <a href="https://www.bitget.com/" target="_blank" style="text-decoration: none;" ><b>bitget.com/</b></a>
+            <span style="display: block; height: 1vw;"></span>
+            <a href="https://www.kucoin.com/" target="_blank" style="text-decoration: none;" ><b>kucoin.com/</b></a>
+            <span style="display: block; height: 1vw;"></span>
+            <a href="https://www.coinex.com/" target="_blank" style="text-decoration: none;"><b>www.coinex.com/</b></a>
+
+            <span style="display: block; height: 1vw;"></span>Please, create an account, depostit FIAT "money" and buy some MATIC (Probably the minimum to withdraw is $10 of Matic). You can follow this tutorials:  <a href="https://www.coinex.c/" target="_blank">LINK a TUTORIALES CEX/</a>
+
+
+            <span style="display: block; height: 3vw;"></span>
+                
+        </p>
+
+        </p>
+        </div>
+        
+        
+
+    </div>
+    <div id="content1">
+            <a href="#whatIsDeFi" style="display: flex; align-items: center; text-decoration: none;"><button id="contbut1" class="contentbut " ><div id="mark1" class="marks"></div>What is DeFi?</button></a>
+            <span style="display: block; height: 0.5vw;"></span>
+            <hr style="height: 0.1vw; background-color: #ffffff00; margin:0; border-style: none;"><span style="display: block; height: 0.5vw;"></span>
+            <a href="#MetamaskInstall" style="display: flex; align-items: center; text-decoration: none;"><button id="contbut2" class="contentbut "><div id="mark2" class="marks"></div>Install Metamask</button></a>
+            <span style="display: block; height: 0.5vw;"></span>
+            <hr style="height: 0.1vw; background-color: #ffffff00; margin:0;  border-style: none; "><span style="display: block; height: 0.5vw;"></span>
+            <a href="#WalletConnect" style="display: flex; align-items: center; text-decoration: none;" ><button id="contbut3" class="contentbut "><div id="mark3" class="marks"></div>Connect wallet</button></a>
+            <span style="display: block; height: 0.5vw;"></span>
+            <hr style="height: 0.1vw; background-color: #ffffff00; margin:0;  border-style: none;"><span style="display: block; height: 0.5vw;"></span>
+            <a href="#NewNetworks" style="display: flex; align-items: center; text-decoration: none;"> <button id="contbut4" class="contentbut "><div id="mark4" class="marks"></div>Add Blockchains</button></a>
+            <span style="display: block; height: 0.5vw;"></span>
+            <hr  style="height: 0.1vw; background-color: #ffffff00; margin:0;  border-style: none;"><span style="display: block; height: 0.5vw;"></span>
+            <a href="#Fund" style="display: flex; align-items: center; text-decoration: none;"> <button id="contbut5" class="contentbut "><div id="mark5" class="marks"></div>Fund Wallet</button></a>
+
+
+            
+            <div id="points2"></div>
+          
+    </div>
+
+    <div id="comTask">
+        <div>
+            <p style="font-family: sans-serif; position:fixed; color: white; font-size:1.5vw; font-weight: bold; margin-left: 3vw; margin-top: -0.3vw;">Completed Tasks</p>
+            <div style="position:absolute; height: 80%; width: 90%; overflow-y: auto ;">
+                <p id="task11" style="display: none; font-size: 0.8vw; color: white; margin-left: 0.3vw; margin-top: 2vw; position: absolute;"> + 100 Points : Wallet has been Connected &#x2713;</p>
+                <p id="task12" style="display: none; font-size: 0.8vw; color: white; margin-left: 0.3vw; margin-top: 4vw; position: absolute;"> + 100 Points : Polygon has been added &#x2713;</p>
+                <p id="task13" style="display: none; font-size: 0.8vw; color: white; margin-left: 0.3vw; margin-top: 6vw; position: absolute;"> + 100 Points : Arbitrum has been added &#x2713;</p>
+                <p id="task14" style="display: none; font-size: 0.8vw; color: white; margin-left: 0.3vw; margin-top: 8vw; position: absolute;"> + 100 Points : BSC has been added &#x2713;</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="points">
+                <p id="numPoints" style="font-family: sans-serif; position: absolute; margin-top: 1.4vw;font-weight:200; margin-left: 1.3vw; font-size: 1.7vw;">000</p>
+                <p style=" font-family: sans-serif; position: absolute; font-size: 1.4vw; font-weight:200; margin-top: 3.5vw; margin-left: 0.95vw;">Points</p>
+
+            </div>
+    
+
+        <audio controls id="audioCourse1">
+            <source src="file_example_MP3_1MG.mp3" type="audio/mpeg">
+            Tu navegador no admite la reproducción de audio.
+        </audio>
+
+        <button id="AudioOn1">Play Audio</button>
+        <button id="AudioOn12"></button>
+        <button id="AudioOff1">Stop Course</button>
+        <button id="AudioOff12"></button>
+
+    <div id="progressDiv">
+        <div><p id="perc0" style="color:white; position: absolute; margin-top:1vw; margin-left: -0.5vw; font-size: 1vw;">0%</p><div>
+        <div id="progress">
+        </div>
+        <div id="NOprogress">
+        </div>
+        <div style="position: absolute; margin-top: 1vw; margin-left: 32.5vw; font-size: 1vw; color:white;">100%</div>
+
+
+    </div>
+
+        
+
+    
+
+    
+
+    <script src="back.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+    
+</body>
+</html>
