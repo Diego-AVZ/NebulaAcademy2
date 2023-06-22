@@ -286,7 +286,7 @@
     border-style: none;
     border-bottom-style: solid;
     border-bottom-color: #000000;
-    border-bottom-width: 0.2vw;
+    border-bottom-width: 0.1vw;
     background: linear-gradient(1deg,rgb(34, 95, 208), rgb(19, 19, 139), rgb(51, 57, 207)); 
     color:#ecf4c2;
     z-index: 9999;
