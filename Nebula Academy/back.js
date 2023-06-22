@@ -16,9 +16,13 @@ easy.addEventListener("click", function () {
     easyDiv.style.display = "block";
     InterDiv.style.display = "none";
     HowToDiv.style.display = "none";
-    easy.style.backgroundColor = "#4949ff";
-    Medium.style.backgroundColor = "#1616cc";
-    NebulaXyield.style.backgroundColor = "#1616cc";
+    easy.style.textShadow = "0.2vw 0.2vw 0.1vw rgba(0, 0, 0, 0.833)";
+    Medium.style.textShadow = "0vw 0vw 0.1vw rgba(0, 0, 0, 0.833)";
+    NebulaXyield.style.textShadow = "0vw 0vw 0.1vw rgba(0, 0, 0, 0.833)";
+
+    easy.style.height = "6vw";
+    Medium.style.height = "5vw";
+    NebulaXyield.style.height = "5vw";
     
 
 });
@@ -28,9 +32,13 @@ Medium.addEventListener("click", function () {
   easyDiv.style.display = "none";
   InterDiv.style.display = "block";
   HowToDiv.style.display = "none";
-  Medium.style.backgroundColor = "#4949ff";
-  easy.style.backgroundColor = "#1616cc";
-  NebulaXyield.style.backgroundColor = "#1616cc";
+  Medium.style.textShadow = "0.2vw 0.2vw 0.1vw rgba(0, 0, 0, 0.833)";
+  easy.style.textShadow = "0vw 0vw 0.1vw rgba(0, 0, 0, 0.833)";
+  NebulaXyield.style.textShadow = "0vw 0vw 0.1vw rgba(0, 0, 0, 0.833)";
+
+  easy.style.height = "5vw";
+  Medium.style.height = "6vw";
+  NebulaXyield.style.height = "5vw";
 });
 
 NebulaXyield.addEventListener("click", function () {
@@ -38,9 +46,13 @@ NebulaXyield.addEventListener("click", function () {
   easyDiv.style.display = "none";
   InterDiv.style.display = "none";
   HowToDiv.style.display = "block";
-  NebulaXyield.style.backgroundColor = "#4949ff";
-  Medium.style.backgroundColor = "#1616cc";
-  easy.style.backgroundColor = "#1616cc";
+  NebulaXyield.style.textShadow = "0.2vw 0.2vw 0.1vw rgba(0, 0, 0, 0.833)";
+  Medium.style.textShadow = "0vw 0vw 0.1vw rgba(0, 0, 0, 0.833)";
+  easy.style.textShadow = "0vw 0vw 0.1vw rgba(0, 0, 0, 0.833)";
+
+  easy.style.height = "5vw";
+  Medium.style.height = "5vw";
+  NebulaXyield.style.height = "6vw";
 
 });
 
@@ -66,7 +78,7 @@ var AudioOn12 = document.getElementById("AudioOn12");
 var progressDiv = document.getElementById("progressDiv");
 var comTask = document.getElementById("comTask");
 var points000 = document.getElementById("points")
-
+var video = document.getElementById("videoBG");
 
 
 EasyCourse.addEventListener("click", function(){
@@ -86,7 +98,8 @@ EasyCourse.addEventListener("click", function(){
     AudioOn12.style.display = "block";
     progressDiv.style.display = "block";
     comTask.style.display = "block"; 
-    points000.style.display = "block" 
+    points000.style.display = "block";
+    videoBG.style.display="none";
     
 
 });
@@ -562,21 +575,16 @@ var callStop = setInterval(stopInterval, 5000);
 
 
 
+//video
+
+var video = document.getElementById("videoBG");
+video.playbackRate = 0.75;
+
+
+
   ///////////////////////////////////////////////////////////////////
  ///////////////////////////// EFECTOS /////////////////////////////
 ///////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
