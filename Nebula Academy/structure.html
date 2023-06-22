@@ -8,15 +8,18 @@
     <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body id="body" style="overflow: hidden; cursor: crosshair; ">
+<body id="body" style="overflow: hidden; cursor: crosshair; background-color: black;">
+
+            <video id="videoBG" autoplay loop muted>
+                    <source src="add.mp4" type="video/mp4">
+            </video>
+
             <img id="logo" src="logoNeb.png" style="z-index:9998; position: fixed; width: 10vw; margin-top: 42vw; margin-left:42.5vw; display: block;">
-            <img id="logo2"  style="position: fixed; width: 7vw; margin-top: -1.8vw; margin-left:20vw; display: none; opacity: 80%; z-index: 9999;">
-     <img  src="imgweb.png" style="position: absolute; width: 75vw; margin-top: -5%; margin-left:48%; transform: rotate(85deg); opacity: 20%;">
-     <img  src="webimg2.png" style="position: absolute; width: 90vw; margin-top: -10%; margin-left:20%; transform: rotate(25deg); opacity: 42%; filter: brightness(40%);">
-     <img  src="webimg2.png" style="position: absolute; width: 90vw; margin-top: -15%; margin-left:-30%; transform: rotate(25deg); opacity: 42%; filter: brightness(40%);">
-<div style="position: fixed; width: 98%; height: 98%; margin-top: -1vw;">
-    <p id="t1" style="position:absolute; font-size: 3.7vw; color:rgb(91, 91, 91); margin-top: 4vw; margin-left: 4vw; display: block;">Welcome to the</p>
-    <p id="t2" style="position:absolute; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; font-size: 6vw; color:rgb(0, 0, 0); margin-top: 8vw; margin-left: 4vw; font-weight: 600; display: block;">Nebula Academy</p>
+            <img id="logo2" style="position: fixed; width: 7vw; margin-top: -1.8vw; margin-left:20vw; display: none; opacity: 80%; z-index: 9999;">
+     
+
+    <p id="t1">Welcome to the</p>
+    <p id="t2">Nebula Academy</p>
     <!--<p style="position:absolute; font-size: 2vw; color:rgb(91, 90, 90); margin-top: 12vw; margin-left: 2vw; font-weight: 600;">Please Select your Level:</p> -->
     <div id="LevelIndex">
         <button id="easy"><p style=" font-size: 1.8vw; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top: 1.3vw ; margin-left:0;">Easy</p></button>
@@ -58,7 +61,7 @@
             For each task completed, you will earn points. Once you have completed the course, you will have the opportunity to Mint an NFT certificate. <br>
         By acquiring all the NFTs, you will gain rewards and benefits within the Nebula Protocol ecosystem.</p>
     </div>
-</div>
+
 
       
 
@@ -71,10 +74,10 @@
         <div style="width: 90%; height: 97%;">
             <img src="mtmsk.png" style="position: absolute; margin-top: 62.8vw; margin-left: 36.4vw; width: 4vw;">
             <div id="account" ></div>
-        <button class="courseButtons" id="MTMSK" onclick="Connect()" >Connect Wallet</button>
-        <button  class="courseButtons" id="addPolygon" style="z-index: 9999; position: absolute;font-size:1.2vw;  margin-top: 184.5vw; margin-left: 3vw; width: 10vw;color:rgb(255, 255, 255); background-color: rgb(106, 40, 169); border-radius: 1vw; border-style: none; height: 2.5vw; cursor: pointer;">Add Polygon</button>
-         <button  class="courseButtons" id="addArbitrum" style="z-index: 9999; position: absolute;font-size:1.2vw;  margin-top: 184.5vw; margin-left: 14vw; width: 10vw;color:rgb(255, 255, 255); background-color: rgba(17, 35, 190, 0.96); border-radius: 1vw; border-style: none; height: 2.5vw; cursor: pointer;">Add Arbitrum</button>
-         <button  class="courseButtons" id="addBSC" style="z-index: 9999; position: absolute;font-size:1.2vw;  margin-top: 184.5vw; margin-left: 25vw; width: 10vw; color:rgb(255, 255, 255); background-color: rgb(241, 190, 36); border-radius: 1vw; border-style: none; height: 2.5vw; cursor: pointer;">Add BSC</button>
+        <button class="courseButtons" id="MTMSK" onclick="Connect()" >Connect</button>
+        <button  class="courseButtons" id="addPolygon" style="z-index: 9999; position: absolute;font-size:1.2vw;  margin-top: 184.5vw; margin-left: 3vw; width: 10vw;color:rgb(255, 255, 255); background-color: rgb(106, 40, 169); border-radius: 1vw; border-style: none; height: 2.5vw; cursor: pointer;">Polygon</button>
+         <button  class="courseButtons" id="addArbitrum" style="z-index: 9999; position: absolute;font-size:1.2vw;  margin-top: 184.5vw; margin-left: 14vw; width: 10vw;color:rgb(255, 255, 255); background-color: rgba(17, 35, 190, 0.96); border-radius: 1vw; border-style: none; height: 2.5vw; cursor: pointer;">Arbitrum</button>
+         <button  class="courseButtons" id="addBSC" style="z-index: 9999; position: absolute;font-size:1.2vw;  margin-top: 184.5vw; margin-left: 25vw; width: 10vw; color:rgb(255, 255, 255); background-color: rgb(241, 190, 36); border-radius: 1vw; border-style: none; height: 2.5vw; cursor: pointer;">Binance</button>
             <span id="wid" style="display: block; height: 1vw;"></span>
             <p id="whatIsDeFi" style="font-size: 3vw; font-family: sans-serif; font-weight: 600; color:black;">What is DeFi?</p><span style="display: block; height: 1vw;"></span><span style="display: block; height: 1vw;"></span>
         <p style="text-align: justify; position:absolute; font-size: 1.5vw; font-family: sans-serif;  margin-top: 0vw ; width: 90%; line-height: 1.7;">
@@ -129,7 +132,7 @@
 
          <hr id="Fund" style="margin-top: 4vw ; margin-left: 3vw; height: 0.1vw; ">
 
-          <button  onclick=switchToPolygonNetwork() class="courseButtons" id="SwitchPolygon" style="z-index: 9999; position: absolute;font-size:1.2vw; margin-top: 34.4vw; margin-left: 27vw; width: 12vw; color:rgb(255, 255, 255); background-color: rgb(88, 35, 136); border-radius: 1vw; border-style: none; height: 2.5vw; cursor: pointer;">Switch to Polygon</button>
+          <button  onclick=switchToPolygonNetwork() class="courseButtons" id="SwitchPolygon" style="z-index: 9999; position: absolute;font-size:1.2vw; margin-top: 34.4vw; margin-left: 27vw; width: 12vw; color:rgb(255, 255, 255); background-color: rgb(88, 35, 136); border-radius: 1vw; border-style: none; height: 2.5vw; cursor: pointer;">Switch</button>
           <a href="#NextStep1"><button id="skip1">Skip</button></a>
         <p id="FundWallet" style="font-size: 3vw;  margin-top: 4vw ; font-family: sans-serif; font-weight: 600; color:black;">Fund your Wallet</p><span style="display: block; height: 1vw;"></span>
         <p style="text-align:center; text-align: justify; position:relative; font-size: 1.5vw; font-family: sans-serif;  margin-top: -2vw ;  margin-left: 1vw ; width: 103%; line-height: 1.7;">
